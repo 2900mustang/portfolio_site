@@ -1,0 +1,94 @@
+$white: rgb(226, 226, 226);
+
+.banner {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: top;
+  }
+  .title {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, .5);
+    text-align: center;
+    color: rgba(0, 0, 0, .75);
+    h1 {
+      font-size: 42px;
+    }
+    h3 {
+      padding: 10px 0px;
+      font-size: 32px;
+    }
+  }
+}
+
+.story, .random {
+  display: flex;
+  justify-content: space-between;
+  width: 83%;
+  margin: auto;
+  padding: 4.5vh 0;
+  .story-description, .random-description {
+    width: 54%;
+    h3 {
+      font-size: 36px;
+      letter-spacing: .11rem;
+      span {
+        animation: blinkingPeriod 1.2s infinite;
+      }
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.random-description {
+  width: 17%;
+}
+
+.whiteboarding img {
+  width: 317px;
+  padding-top: 45px;
+}
+.random-gallery {
+  padding-left: 2.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 195px);
+  grid-gap: .125rem;
+  img {
+    width: 100%;
+    height: 175px;
+    object-fit: scale-down;
+  }
+}
+.random {
+  padding-bottom: 7vh;
+}
+
+@keyframes blinkingPeriod {
+  0% { color: #000; }
+  100% { color: transparent; }
+}
+
+@media (max-width: 1024px) {
+  .story, .random {
+    flex-direction: column;
+    .story-description, .random-description {
+      width: 100%;
+    }
+    .whiteboarding {
+      text-align: center;
+    }
+    .random-gallery {
+      padding-top: 3.6vh;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    }
+  }
+}

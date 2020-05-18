@@ -1,0 +1,38 @@
+$white: rgba(255, 250, 250, 0.637);
+
+.contact_container {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  // min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .resume_box {
+    // height: 50vh;
+    padding-top: 9vh;
+    img {
+      height: 900px;
+    }
+  }
+  .email_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
+    h3 {
+      color: $white;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: #777;
+      }
+      .email_icon {
+        padding: 0;
+        font-size: 10.1rem;
+      }
+    }
+  }
+}

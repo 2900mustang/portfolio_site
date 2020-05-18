@@ -1,0 +1,23 @@
+.footer-container {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3.9vh;
+  width: 100vw;
+  background-color: rgba(255, 248, 220, 0.788);
+  .social-icons {
+    width: 38%;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      color: #000;
+      &:hover {
+        color: #777;
+      }
+    }
+  }
+}
